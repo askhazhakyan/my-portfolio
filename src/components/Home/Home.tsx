@@ -17,37 +17,37 @@ const techData = {
   HTML: { 
     color: '#FF4B1E',
     font_color:"white",
-    percentage: 80, 
+    percentage: 90, 
     experience: '4 years',
   },
   CSS: { 
     color: '#0164F3', 
     font_color:"white",
-    percentage: 75, 
+    percentage: 85, 
     experience: '3 years',
   },
   SCSS: {
     color: '#CC6699',
     font_color:"white",
-    percentage: 70, 
+    percentage: 80, 
     experience: '2 years',
   },
   JavaScript: {
     color: '#FFDF00', 
     font_color:"black",
-    percentage: 85, 
+    percentage: 70, 
     experience: '5 years',
   },
   TypeScript: {
     color: '#3077C6', 
     font_color:"white",
-    percentage: 80, 
+    percentage: 60, 
     experience: '4 years',
   },
   React: {
     color: '#0088F0',
     font_color:"white",
-    percentage: 75, 
+    percentage: 80, 
     experience: '3 years',
   },
   Angular: {
@@ -59,7 +59,7 @@ const techData = {
   Node: {
     color: '#21A365', 
     font_color:"white",
-    percentage: 85, 
+    percentage: 65, 
     experience: '5 years',
   },
   AWS: { 
