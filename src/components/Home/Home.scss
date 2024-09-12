@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Nunito:ital,wght@200..1000&display=swap');
+
+.home-container {
+  background-color: #EBEBEB;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5vw;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.intro-container {
+  width: 50%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 2vw;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 6vw;
+}
+
+.intro {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(24px + 1vw);
+  margin: 10px 0;
+}
+
+.intro-name, .intro-loc {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(12px + 0.5vw);
+  font-variant: all-small-caps;
+  margin: 0;
+}
+
+.social-buttons {
+  margin: 20px 0 0 0;
+}
+
+.social-icon {
+  width: 5vw;
+  height: 5vw;
+  min-width: 25px;
+  min-height: 25px;
+  max-width: 40px;
+  max-height: 40px;
+  margin-right: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.tech-stack {
+  position: relative;
+  right: 5vw;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8vw;
+}
+
+.blob-container {
+  position: relative;
+  width: 45vw;
+  height: 45vw;
+  min-width: 250px;
+  min-height: 250px;
+  max-width: 300px;
+  max-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 4s ease-in-out infinite;
+  transition: all 0.75s ease;
+  overflow: hidden;
+  background-color: #EBEBEB;
+}
+
+.blob {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));
+  transition: transform 0.6s ease, width 0.8s ease, height 0.8s ease;
+}
+
+.blob-container.expand .blob {
+  width: 100vw;
+  height: 100vh;
+  transform: scale(2);
+}
+
+.blob-container.expand {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 25px;
+  position: relative;
+  background-color: #EBEBEB;
+  margin-bottom: 30px;
+}
+
+.blob-container.change-color {
+  background-color: var(--tech-color);
+}
+
+.blob:nth-child(2){
+  filter: blur(50px);
+}
+
+.back-arrow {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  z-index: 2;
+  transition: 0.3s all ease;
+  rotate: 180deg;
+}
+
+.back-arrow:hover {
+  transform: scale(1.2);
+}
+
+.ts-label {
+  position: absolute;
+  color: #333;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: calc(12px + 0.5vw);
+  text-align: center;
+  width: calc(48px + 4vw);
+  z-index: 2;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tech-details {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 2;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.tech-name {
+  position: relative;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  justify-content: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: calc(12px + 1vw);
+  margin-bottom: 2vw;
+  transition: 'all 0.3s ease';
+}
+
+.skill {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  width: 50vw;
+  max-width: 250px;
+  transition: 'all 0.3s ease';
+  margin-bottom: 2vw;
+  gap: 1vw;
+}
+
+.bar-background {
+  width: 60%;
+  height: 0.5vw;
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.bar-fill {
+  height: 100%;
+  background: white;
+  transition: width 0.5s ease-in-out;
+  border-radius: 5px;
+}
+
+.skill-label {
+  position: relative;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  font-size: calc(12px + 0.25vw);
+  transition: 'all 0.3s ease';
+  white-space: nowrap;
+}
+
+.skill-percentage{
+  font-family: "Nunito", sans-serif;
+  font-size: calc(12px + 0.25vw);
+  transition: 'all 0.3s ease';
+}
+
+.experience {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Nunito", sans-serif;
+  font-size: calc(12px + 0.25vw);
+  transition: 'all 0.3s ease';
+  width: 50vw;
+  max-width: 250px;
+}
+
+.experience-label {
+  font-weight: bold;
+  font-family: "Bebas Neue", sans-serif;
+  transition: 'all 0.3s ease';
+}
+
+.experience-value {
+  font-weight: normal;
+  transition: 'all 0.3s ease';
+}
+
+.ts-icons {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1vw;
+}
+
+.tech-icon {
+  width: 4vw;
+  height: 4vw;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 50px;
+  max-height: 50px;
+  margin: 0 1px 10px 1px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1);
+}
+
+.separator {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  width: 100%;
+  margin: 2vw 0;
+}
+
+.fade-in {
+  opacity: 1 !important;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1.5vw);
+  }
+}
+
+.tech-details {
+  display: block;
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
