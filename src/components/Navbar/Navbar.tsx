@@ -38,32 +38,32 @@ const Navbar: React.FC = () => {
 
       <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
         <li>
-          <Link to="/my-portfolio/" id='Links' className={isActiveRoute('/') ? 'active' : ''}>Home</Link> {/* Use Link here */}
-          {isMobile && isActiveRoute('/') && (
+          <Link to="/my-portfolio/" id='Links' className={isActiveRoute('/my-portfolio/') ? 'active' : ''}>Home</Link> {/* Use Link here */}
+          {isMobile && isActiveRoute('/my-portfolio/') && (
             <div className="semicircle visible">
               <div className="position-circle"></div>
             </div>
           )}
         </li>
         <li>
-          <Link to="/about/" id='Links' className={isActiveRoute('/about') ? 'active' : ''}>About</Link> {/* Use Link here */}
-          {isMobile && isActiveRoute('/about') && (
+          <Link to="/about/" id='Links' className={isActiveRoute('/about/') ? 'active' : ''}>About</Link> {/* Use Link here */}
+          {isMobile && isActiveRoute('/about/') && (
             <div className="semicircle visible">
               <div className="position-circle"></div>
             </div>
           )}
         </li>
         <li>
-          <Link to="/projects/" id='Links' className={isActiveRoute('/projects') ? 'active' : ''}>Projects</Link>
-          {isMobile && isActiveRoute('/projects') && (
+          <Link to="/projects/" id='Links' className={isActiveRoute('/projects/') ? 'active' : ''}>Projects</Link>
+          {isMobile && isActiveRoute('/projects/') && (
             <div className="semicircle visible">
               <div className="position-circle"></div>
             </div>
           )}
         </li>
         <li>
-          <Link to="/contact/" id='Links' className={isActiveRoute('/contact') ? 'active' : ''}>Contact</Link>
-          {isMobile && isActiveRoute('/contact') && (
+          <Link to="/contact/" id='Links' className={isActiveRoute('/contact/') ? 'active' : ''}>Contact</Link>
+          {isMobile && isActiveRoute('/contact/') && (
             <div className="semicircle visible">
               <div className="position-circle"></div>
             </div>
