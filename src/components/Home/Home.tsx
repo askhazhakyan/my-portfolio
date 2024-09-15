@@ -108,9 +108,9 @@ const Home: React.FC = () => {
     <div className='home-container'>
       <div className="intro-container">
         <div className="content-wrapper">        
-          <p className='intro-name'>Hi, I'm <b><i>Alex Khazhakyan</i></b>. An enthusiastic</p>
+          <p className='intro-name'>Hi, I'm <span>Alex Khazhakyan.</span> An enthusiastic</p>
           <h1 className='intro'>Full-Stack Web Developer</h1>
-          <p className='intro-loc'> based in <b><i>Los Angeles, CA</i></b> 📍</p>
+          <p className='intro-loc'> based in <span>Los Angeles, CA 📍</span></p>
           <div className="social-buttons">
             <a href="https://www.linkedin.com/in/alex-khazhakyan" target="_blank" rel="noopener noreferrer">
               <img src={LinkedIn_Logo} alt="LinkedIn" className="social-icon" />

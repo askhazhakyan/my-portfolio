@@ -6,7 +6,7 @@ const About: React.FC = () => {
     <div className='about-container'>
         <section>
             <div className="about_blob">
-
+              <h1>ABOUT</h1>
             </div>
         </section>
     </div>

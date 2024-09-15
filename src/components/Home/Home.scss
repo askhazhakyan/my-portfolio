@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Nunito:ital,wght@200..1000&display=swap');
 
+span{
+  font-weight: bold;
+  font-style: italic;
+}
+
 .home-container {
   background-color: #EBEBEB;
   height: 100vh;
@@ -10,24 +15,17 @@
   align-items: center;
   padding: 0 5vw;
   box-sizing: border-box;
-  overflow: scroll;
   scroll-behavior: smooth;
 }
 
 .intro-container {
+  position: relative;
+  top: 12%;
   width: 50%; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-right: 2vw;
-
-  @media screen and (max-width: 699px) {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    text-align: center;
-  }
 }
 
 .content-wrapper {
@@ -55,6 +53,7 @@
 
 .social-buttons {
   margin: 20px 0 0 0;
+  z-index: 2;
 }
 
 .social-icon {
@@ -75,20 +74,13 @@
 .tech-stack {
   position: relative;
   right: 5vw;
+  top: 15%;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 8vw;
-
-  @media screen and (max-width: 699px) {
-    position: relative;
-    bottom: 120px;
-    width: 100%;
-    top: 60vw;
-    right: 19vw;
-  }
 }
 
 .blob-container {
@@ -119,7 +111,7 @@
 .blob-container.expand .blob {
   width: 100vw;
   height: 100vh;
-  transform: scale(2);
+  transform: scale(2.5);
 }
 
 .blob-container.expand {
@@ -318,4 +310,62 @@
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+
+@media screen and (max-width: 699px) {
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5vw;
+    margin-top: 120px;
+    height: auto;
+  }
+
+  .intro-container {
+    width: 100%;
+    min-width: 300px;
+    text-align: center;
+    margin-bottom: 2vw;
+  }
+
+  .tech-stack {
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2vw;
+
+    .ts-label {
+      font-weight: 600;
+    }
+
+    .tech-details {
+      .tech-name {
+        font-weight: 400;
+      }
+
+      .skill-label {
+        font-weight: 400;
+      }
+
+      .experience-label {
+        font-weight: 400;
+      }
+    }
+
+    .ts-icons {
+      min-width: 250px;
+      margin: 0 auto;
+    }
+  }
+
+  .blob-container {
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    padding: 20px;
+    margin: 40px auto 0 auto;
+  }
 }
